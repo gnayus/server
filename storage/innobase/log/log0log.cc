@@ -2286,12 +2286,8 @@ void
 log_mem_free(void)
 /*==============*/
 {
-	if (log_sys != NULL) {
-		recv_sys_mem_free();
-		ut_free(log_sys);
-
-		log_sys = NULL;
-	}
+	ut_free(log_sys);
+	log_sys = NULL;
 }
 
 /******************************************************//**
